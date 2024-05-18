@@ -94,14 +94,15 @@ def run_length_encoding(x):
 
     Not vectorized implementation.
     """
-
+    x_list = x.tolist()
+    
     if len(x_list) == 0:
         return [], []
 
     elements = []
     counters = []
 
-    current_element = x[0]
+    current_element = x_list[0]
     count = 1
 
     for i in range(1, len(x_list)):
